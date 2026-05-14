@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystical Portal - Numerology, Astrology & Spiritual Guidance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="cosmic-bg">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+        <div class="shooting-stars"></div>
+        <div class="nebula"></div>
+    </div>
+
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-symbol">☽</span>
+                <span class="logo-text">Mystical Portal</span>
+                <span class="logo-symbol">☾</span>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#numerology">Numerology</a></li>
+                <li><a href="#destiny-matrix">Destiny Matrix</a></li>
+                <li><a href="#chakras">Chakras</a></li>
+                <li><a href="#astrology">Astrology</a></li>
+                <li><a href="#compatibility">Compatibility</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="mystic-circle">
+                <div class="circle-outer"></div>
+                <div class="circle-middle"></div>
+                <div class="circle-inner"></div>
+                <div class="zodiac-wheel"></div>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">Discover Your</span>
+                <span class="title-main">Cosmic Blueprint</span>
+                <span class="title-sub">Numerology • Astrology • Spiritual Wisdom</span>
+            </h1>
+            <p class="hero-description">
+                Unlock the secrets of your soul through ancient wisdom and celestial guidance. 
+                Explore your life path, destiny matrix, chakra alignment, and astrological blueprint.
+            </p>
+            <div class="hero-buttons">
+                <a href="#numerology" class="btn btn-primary">
+                    <span class="btn-icon">✧</span>
+                    Begin Your Journey
+                    <span class="btn-icon">✧</span>
+                </a>
+                <a href="#astrology" class="btn btn-secondary">
+                    <span class="btn-icon">☆</span>
+                    View Birth Chart
+                </a>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll to Explore</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🔢</div>
+                    <div class="stat-number" data-count="5">5</div>
+                    <div class="stat-label">Core Numbers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🌟</div>
+                    <div class="stat-number" data-count="22">22</div>
+                    <div class="stat-label">Arcana Cards</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔮</div>
+                    <div class="stat-number" data-count="7">7</div>
+                    <div class="stat-label">Chakra Centers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-number" data-count="12">12</div>
+                    <div class="stat-label">Zodiac Signs</div>
+                </div>
+            </div>
+        </div>
+    </section>    <!-- Numerology Section -->
+    <section id="numerology" class="section numerology-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Sacred Numbers</span>
+                <h2 class="section-title">Numerology Reading</h2>
+                <p class="section-subtitle">Discover the mystical meaning behind your birth date and name</p>
+            </div>
+
+            <div class="numerology-container">
+                <!-- Input Form -->
+                <div class="input-card glass-card">
+                    <div class="card-header">
+                        <h3>Enter Your Details</h3>
+                        <span class="card-icon">✦</span>
+                    </div>
+                    <form id="numerologyForm" class="mystical-form">
+                        <div class="form-group">
+                            <label for="fullName">
+                                <span class="label-icon">👤</span>
+                                Full Birth Name
+                            </label>
+                            <input type="text" id="fullName" name="fullName" required 
+                                   placeholder="Enter your complete birth name">
+                            <span class="input-hint">Use the name on your birth certificate</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="birthDate">
+                                <span class="label-icon">📅</span>
+                                Birth Date
+                            </label>
+                            <input type="date" id="birthDate" name="birthDate" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span class="btn-glow"></span>
+                            <span class="btn-text">Calculate My Numbers</span>
+                            <span class="btn-icon">→</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Results Display -->
+                <div id="numerologyResults" class="results-container hidden">
+                    <div class="results-header">
+                        <h3>Your Numerology Profile</h3>
+                        <div class="results-actions">
+                            <button class="action-btn" onclick="printResults('numerology')">
+                                <span>🖨️</span> Print
+                            </button>
+                            <button class="action-btn" onclick="shareResults('numerology')">
+                                <span>📤</span> Share
+                            </button>
+                            <button class="action-btn" onclick="downloadPDF('numerology')">
+                                <span>📄</span> PDF
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Core Numbers Grid -->
+                    <div class="numbers-grid">
+                        <!-- Life Path Number -->
+                        <div class="number-card life-path">
+                            <div class="number-visual">
+                                <div class="number-circle">
+                                    <span id="lifePathNumber">0</span>
+                                </div>
+                                <div class="number-rings"></div>
+                            </div>
+                            <h4>Life Path Number</h4>
+                            <p class="number-keyword" id="lifePathKeyword">Your Core Purpose</p>
+                            <div class="number-description" id="lifePathDescription"></div>
+                            <button class="expand-btn" onclick="toggleExpand('lifePath')">
+                                Read Full Analysis ↓
+                            </button>
+                            <div class="expanded-content" id="lifePathExpanded"></div>
+                        </div>
+
+                        <!-- Destiny Number -->
+                        <div class="number-card destiny">
+                            <div class="number-visual">
+                                <div class="number-circle">
+                                    <span id="destinyNumber">0</span>
+                                </div>
+                                <div class="number-rings"></div>
+                            </div>
+                            <h4>Destiny Number</h4>
+                            <p class="number-keyword" id="destinyKeyword">Your Life Mission</p>
+                            <div class="number-description" id="destinyDescription"></div>
+                            <button class="expand-btn" onclick="toggleExpand('destiny')">
+                                Read Full Analysis ↓
+                            </button>
+                            <div class="expanded-content" id="destinyExpanded"></div>
+                        </div>
+
+                        <!-- Soul Urge Number -->
+                        <div class="number-card soul-urge">
+                            <div class="number-visual">
+                                <div class="number-circle">
+                                    <span id="soulUrgeNumber">0</span>
+                                </div>
+                                <div class="number-rings"></div>
+                            </div>
+                            <h4>Soul Urge Number</h4>
+                            <p class="number-keyword" id="soulUrgeKeyword">Your Heart's Desire</p>
+                            <div class="number-description" id="soulUrgeDescription"></div>
+                            <button class="expand-btn" onclick="toggleExpand('soulUrge')">
+                                Read Full Analysis ↓
+                            </button>
+                            <div class="expanded-content" id="soulUrgeExpanded"></div>
+                        </div>
+
+                        <!-- Personality Number -->
+                        <div class="number-card personality">
+                            <div class="number-visual">
+                                <div class="number-circle">
+                                    <span id="personalityNumber">0</span>
+                                </div>
+                                <div class="number-rings"></div>
+                            </div>
+                            <h4>Personality Number</h4>
+                            <p class="number-keyword" id="personalityKeyword">Your Outer Self</p>
+                            <div class="number-description" id="personalityDescription"></div>
+                            <button class="expand-btn" onclick="toggleExpand('personality')">
+                                Read Full Analysis ↓
+                            </button>
+                            <div class="expanded-content" id="personalityExpanded"></div>
+                        </div>
+
+                        <!-- Birthday Number -->
+                        <div class="number-card birthday">
+                            <div class="number-visual">
+                                <div class="number-circle">
+                                    <span id="birthdayNumber">0</span>
+                                </div>
+                                <div class="number-rings"></div>
+                            </div>
+                            <h4>Birthday Number</h4>
+                            <p class="number-keyword" id="birthdayKeyword">Your Special Gift</p>
+                            <div class="number-description" id="birthdayDescription"></div>
+                            <button class="expand-btn" onclick="toggleExpand('birthday')">
+                                Read Full Analysis ↓
+                            </button>
+                            <div class="expanded-content" id="birthdayExpanded"></div>
+                        </div>
+
+                        <!-- Personal Year -->
+                        <div class="number-card personal-year">
+                            <div class="number-visual">
+                                <div class="number-circle">
+                                    <span id="personalYearNumber">0</span>
+                                </div>
+                                <div class="number-rings"></div>
+                            </div>
+                            <h4>Personal Year</h4>
+                            <p class="number-keyword" id="personalYearKeyword">Current Cycle</p>
+                            <div class="number-description" id="personalYearDescription"></div>
+                            <button class="expand-btn" onclick="toggleExpand('personalYear')">
+                                Read Full Analysis ↓
+                            </button>
+                            <div class="expanded-content" id="personalYearExpanded"></div>
+                        </div>
+                    </div>
+
+                    <!-- Pattern Analysis -->
+                    <div class="pattern-analysis glass-card">
+                        <h4>🔮 Number Pattern Analysis</h4>
+                        <div id="patternAnalysis" class="pattern-content"></div>
+                    </div>
+
+                    <!-- Reflection Questions -->
+                    <div class="reflection-section glass-card">
+                        <h4>✨ Reflection Questions</h4>
+                        <div id="reflectionQuestions" class="reflection-content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    <!-- Destiny Matrix Section -->
+    <section id="destiny-matrix" class="section matrix-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">22 Arcana</span>
+                <h2 class="section-title">Destiny Matrix</h2>
+                <p class="section-subtitle">Explore the 22 Major Arcana energies in your life blueprint</p>
+            </div>
+
+            <div class="matrix-container">
+                <div class="input-card glass-card">
+                    <div class="card-header">
+                        <h3>Calculate Your Matrix</h3>
+                        <span class="card-icon">🎴</span>
+                    </div>
+                    <form id="matrixForm" class="mystical-form">
+                        <div class="form-group">
+                            <label for="matrixBirthDate">
+                                <span class="label-icon">📅</span>
+                                Birth Date
+                            </label>
+                            <input type="date" id="matrixBirthDate" name="matrixBirthDate" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span class="btn-glow"></span>
+                            <span class="btn-text">Reveal My Destiny Matrix</span>
+                            <span class="btn-icon">→</span>
+                        </button>
+                    </form>
+                </div>
+
+                <div id="matrixResults" class="results-container hidden">
+                    <div class="results-header">
+                        <h3>Your Destiny Matrix</h3>
+                        <div class="results-actions">
+                            <button class="action-btn" onclick="printResults('matrix')">
+                                <span>🖨️</span> Print
+                            </button>
+                            <button class="action-btn" onclick="shareResults('matrix')">
+                                <span>📤</span> Share
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Matrix Visual -->
+                    <div class="matrix-visual">
+                        <div class="matrix-diagram">
+                            <div class="matrix-point center" id="matrixCenter">
+                                <span class="point-number"></span>
+                                <span class="point-label">Soul</span>
+                            </div>
+                            <div class="matrix-point top" id="matrixTop">
+                                <span class="point-number"></span>
+                                <span class="point-label">Higher Self</span>
+                            </div>
+                            <div class="matrix-point right" id="matrixRight">
+                                <span class="point-number"></span>
+                                <span class="point-label">Male Line</span>
+                            </div>
+                            <div class="matrix-point bottom" id="matrixBottom">
+                                <span class="point-number"></span>
+                                <span class="point-label">Comfort Zone</span>
+                            </div>
+                            <div class="matrix-point left" id="matrixLeft">
+                                <span class="point-number"></span>
+                                <span class="point-label">Female Line</span>
+                            </div>
+                            <div class="matrix-lines">
+                                <svg viewBox="0 0 400 400">
+                                    <line x1="200" y1="50" x2="350" y2="200" stroke="rgba(212,175,55,0.5)" stroke-width="2"/>
+                                    <line x1="350" y1="200" x2="200" y2="350" stroke="rgba(212,175,55,0.5)" stroke-width="2"/>
+                                    <line x1="200" y1="350" x2="50" y2="200" stroke="rgba(212,175,55,0.5)" stroke-width="2"/>
+                                    <line x1="50" y1="200" x2="200" y2="50" stroke="rgba(212,175,55,0.5)" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Arcana Cards -->
+                    <div class="arcana-grid" id="arcanaGrid"></div>
+
+                    <!-- Detailed Readings -->
+                    <div class="matrix-readings">
+                        <div class="reading-tabs">
+                            <button class="tab-btn active" data-tab="soul">Soul Purpose</button>
+                            <button class="tab-btn" data-tab="talents">Talents</button>
+                            <button class="tab-btn" data-tab="karma">Karmic Lessons</button>
+                            <button class="tab-btn" data-tab="relationships">Relationships</button>
+                            <button class="tab-btn" data-tab="money">Money & Career</button>
+                        </div>
+                        <div class="reading-content">
+                            <div id="soulTab" class="tab-panel active"></div>
+                            <div id="talentsTab" class="tab-panel"></div>
+                            <div id="karmaTab" class="tab-panel"></div>
+                            <div id="relationshipsTab" class="tab-panel"></div>
+                            <div id="moneyTab" class="tab-panel"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chakra Section -->
+    <section id="chakras" class="section chakra-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Energy Centers</span>
+                <h2 class="section-title">Chakra Analysis</h2>
+                <p class="section-subtitle">Understand your 7 energy centers and their current state</p>
+            </div>
+
+            <div class="chakra-container">
+                <div class="input-card glass-card">
+                    <div class="card-header">
+                        <h3>Chakra Assessment</h3>
+                        <span class="card-icon">🧘</span>
+                    </div>
+                    <form id="chakraForm" class="mystical-form">
+                        <div class="form-group">
+                            <label for="chakraBirthDate">
+                                <span class="label-icon">📅</span>
+                                Birth Date
+                            </label>
+                            <input type="date" id="chakraBirthDate" name="chakraBirthDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="chakraName">
+                                <span class="label-icon">👤</span>
+                                Full Name
+                            </label>
+                            <input type="text" id="chakraName" name="chakraName" required 
+                                   placeholder="Enter your full name">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span class="btn-glow"></span>
+                            <span class="btn-text">Analyze My Chakras</span>
+                            <span class="btn-icon">→</span>
+                        </button>
+                    </form>
+                </div>
+
+                <div id="chakraResults" class="results-container hidden">
+                    <div class="results-header">
+                        <h3>Your Chakra Profile</h3>
+                        <div class="results-actions">
+                            <button class="action-btn" onclick="printResults('chakra')">
+                                <span>🖨️</span> Print
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Chakra Body Visualization -->
+                    <div class="chakra-visual">
+                        <div class="chakra-body">
+                            <div class="body-silhouette"></div>
+                            <div class="chakra-point crown" data-chakra="crown">
+                                <div class="chakra-glow"></div>
+                                <span class="chakra-symbol">☸</span>
+                            </div>
+                            <div class="chakra-point third-eye" data-chakra="thirdEye">
+                                <div class="chakra-glow"></div>
+                                <span class="chakra-symbol">👁</span>
+                            </div>
+                            <div class="chakra-point throat" data-chakra="throat">
+                                <div class="chakra-glow"></div>
+                                <span class="chakra-symbol">◎</span>
+                            </div>
+                            <div class="chakra-point heart" data-chakra="heart">
+                                <div class="chakra-glow"></div>
+                                <span class="chakra-symbol">♡</span>
+                            </div>
+                            <div class="chakra-point solar" data-chakra="solar">
+                                <div class="chakra-glow"></div>
+                                <span class="chakra-symbol">☀</span>
+                            </div>
+                            <div class="chakra-point sacral" data-chakra="sacral">
+                                <div class="chakra-glow"></div>
+                                <span class="chakra-symbol">☾</span>
+                            </div>
+                            <div class="chakra-point root" data-chakra="root">
+                                <div class="chakra-glow"></div>
+                                <span class="chakra-symbol">⬟</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chakra Details -->
+                    <div class="chakra-details" id="chakraDetails"></div>
+                </div>
+            </div>
+        </div>
+    </section>    <!-- Astrology Section -->
+    <section id="astrology" class="section astrology-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Celestial Wisdom</span>
+                <h2 class="section-title">Complete Birth Chart</h2>
+                <p class="section-subtitle">Discover your cosmic blueprint through the stars</p>
+            </div>
+
+            <div class="astrology-container">
+                <div class="input-card glass-card">
+                    <div class="card-header">
+                        <h3>Birth Chart Calculator</h3>
+                        <span class="card-icon">⭐</span>
+                    </div>
+                    <form id="astrologyForm" class="mystical-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="astroName">
+                                    <span class="label-icon">👤</span>
+                                    Full Name
+                                </label>
+                                <input type="text" id="astroName" name="astroName" required 
+                                       placeholder="Your name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="astroBirthDate">
+                                    <span class="label-icon">📅</span>
+                                    Birth Date
+                                </label>
+                                <input type="date" id="astroBirthDate" name="astroBirthDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="astroBirthTime">
+                                    <span class="label-icon">🕐</span>
+                                    Birth Time
+                                </label>
+                                <input type="time" id="astroBirthTime" name="astroBirthTime" required>
+                                <span class="input-hint">Use 24-hour format for accuracy</span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="astroLatitude">
+                                    <span class="label-icon">🌍</span>
+                                    Birth Latitude
+                                </label>
+                                <input type="number" id="astroLatitude" name="astroLatitude" required 
+                                       placeholder="e.g., 40.7128" step="0.0001" min="-90" max="90">
+                                <span class="input-hint">Decimal degrees (e.g., 40.7128 for New York)</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="astroLongitude">
+                                    <span class="label-icon">🌐</span>
+                                    Birth Longitude
+                                </label>
+                                <input type="number" id="astroLongitude" name="astroLongitude" required 
+                                       placeholder="e.g., -74.0060" step="0.0001" min="-180" max="180">
+                                <span class="input-hint">Decimal degrees (e.g., -74.0060 for New York)</span>
+                            </div>
+                        </div>
+                        <div class="coordinate-help glass-card">
+                            <p><strong>📍 Need help finding coordinates?</strong></p>
+                            <p>Search your birth city on Google Maps, right-click on the location, and click the coordinates to copy them.</p>
+                            <p class="example">Example: New York = 40.7128, -74.0060</p>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span class="btn-glow"></span>
+                            <span class="btn-text">Generate Birth Chart</span>
+                            <span class="btn-icon">→</span>
+                        </button>
+                    </form>
+                </div>
+
+                <div id="astrologyResults" class="results-container hidden">
+                    <div class="results-header">
+                        <h3>Your Complete Birth Chart</h3>
+                        <div class="results-actions">
+                            <button class="action-btn" onclick="printResults('astrology')">
+                                <span>🖨️</span> Print
+                            </button>
+                            <button class="action-btn" onclick="shareResults('astrology')">
+                                <span>📤</span> Share
+                            </button>
+                            <button class="action-btn" onclick="downloadPDF('astrology')">
+                                <span>📄</span> PDF
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Big Three Display -->
+                    <div class="big-three-display">
+                        <div class="big-three-card sun-card">
+                            <div class="sign-visual">
+                                <span class="sign-symbol" id="sunSymbol">♈</span>
+                                <div class="sign-glow sun-glow"></div>
+                            </div>
+                            <h4>Sun Sign</h4>
+                            <p class="sign-name" id="sunSign">Aries</p>
+                            <p class="sign-meaning">Your Core Identity</p>
+                        </div>
+                        <div class="big-three-card moon-card">
+                            <div class="sign-visual">
+                                <span class="sign-symbol" id="moonSymbol">♋</span>
+                                <div class="sign-glow moon-glow"></div>
+                            </div>
+                            <h4>Moon Sign</h4>
+                            <p class="sign-name" id="moonSign">Cancer</p>
+                            <p class="sign-meaning">Your Emotional Self</p>
+                        </div>
+                        <div class="big-three-card rising-card">
+                            <div class="sign-visual">
+                                <span class="sign-symbol" id="risingSymbol">♎</span>
+                                <div class="sign-glow rising-glow"></div>
+                            </div>
+                            <h4>Rising Sign</h4>
+                            <p class="sign-name" id="risingSign">Libra</p>
+                            <p class="sign-meaning">Your Outer Mask</p>
+                        </div>
+                    </div>
+
+                    <!-- Chart Wheel -->
+                    <div class="chart-wheel-container">
+                        <canvas id="birthChartWheel" width="500" height="500"></canvas>
+                    </div>
+
+                    <!-- Astrology Tabs -->
+                    <div class="astrology-tabs">
+                        <div class="tab-navigation">
+                            <button class="astro-tab-btn active" data-tab="planets">
+                                <span>🪐</span> Planets
+                            </button>
+                            <button class="astro-tab-btn" data-tab="houses">
+                                <span>🏠</span> Houses
+                            </button>
+                            <button class="astro-tab-btn" data-tab="aspects">
+                                <span>🔗</span> Aspects
+                            </button>
+                            <button class="astro-tab-btn" data-tab="elements">
+                                <span>🔥</span> Elements
+                            </button>
+                            <button class="astro-tab-btn" data-tab="dominants">
+                                <span>⭐</span> Dominants
+                            </button>
+                            <button class="astro-tab-btn" data-tab="nodes">
+                                <span>☊</span> Nodes/Chiron
+                            </button>
+                            <button class="astro-tab-btn" data-tab="patterns">
+                                <span>🔮</span> Patterns
+                            </button>
+                            <button class="astro-tab-btn" data-tab="career">
+                                <span>💼</span> Career
+                            </button>
+                            <button class="astro-tab-btn" data-tab="relationships">
+                                <span>💕</span> Relationships
+                            </button>
+                            <button class="astro-tab-btn" data-tab="spiritual">
+                                <span>✨</span> Spiritual
+                            </button>
+                            <button class="astro-tab-btn" data-tab="transits">
+                                <span>🌀</span> Transits
+                            </button>
+                        </div>
+                        <div class="tab-content">
+                            <div id="planetsTab" class="astro-tab-panel active"></div>
+                            <div id="housesTab" class="astro-tab-panel"></div>
+                            <div id="aspectsTab" class="astro-tab-panel"></div>
+                            <div id="elementsTab" class="astro-tab-panel"></div>
+                            <div id="dominantsTab" class="astro-tab-panel"></div>
+                            <div id="nodesTab" class="astro-tab-panel"></div>
+                            <div id="patternsTab" class="astro-tab-panel"></div>
+                            <div id="careerTab" class="astro-tab-panel"></div>
+                            <div id="relationshipsTab" class="astro-tab-panel"></div>
+                            <div id="spiritualTab" class="astro-tab-panel"></div>
+                            <div id="transitsTab" class="astro-tab-panel"></div>
+                        </div>
+                    </div>
+
+                    <!-- Zodiac Reference -->
+                    <div class="zodiac-reference glass-card">
+                        <h4>🌟 12 Zodiac Signs Reference</h4>
+                        <div class="zodiac-grid" id="zodiacGrid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    <!-- Compatibility Section -->
+    <section id="compatibility" class="section compatibility-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Love & Connection</span>
+                <h2 class="section-title">Compatibility Calculator</h2>
+                <p class="section-subtitle">Discover the cosmic connection between two souls</p>
+            </div>
+
+            <div class="compatibility-container">
+                <div class="input-card glass-card dual-input">
+                    <div class="card-header">
+                        <h3>Enter Both Birth Details</h3>
+                        <span class="card-icon">💕</span>
+                    </div>
+                    <form id="compatibilityForm" class="mystical-form">
+                        <div class="person-inputs">
+                            <div class="person-card">
+                                <h4>Person 1</h4>
+                                <div class="form-group">
+                                    <label for="person1Name">Name</label>
+                                    <input type="text" id="person1Name" required placeholder="First person's name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="person1Date">Birth Date</label>
+                                    <input type="date" id="person1Date" required>
+                                </div>
+                            </div>
+                            <div class="heart-divider">
+                                <span>♡</span>
+                            </div>
+                            <div class="person-card">
+                                <h4>Person 2</h4>
+                                <div class="form-group">
+                                    <label for="person2Name">Name</label>
+                                    <input type="text" id="person2Name" required placeholder="Second person's name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="person2Date">Birth Date</label>
+                                    <input type="date" id="person2Date" required>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span class="btn-glow"></span>
+                            <span class="btn-text">Calculate Compatibility</span>
+                            <span class="btn-icon">💫</span>
+                        </button>
+                    </form>
+                </div>
+
+                <div id="compatibilityResults" class="results-container hidden">
+                    <div class="results-header">
+                        <h3>Your Compatibility Reading</h3>
+                    </div>
+
+                    <!-- Compatibility Score -->
+                    <div class="compatibility-score">
+                        <div class="score-circle">
+                            <svg viewBox="0 0 200 200">
+                                <circle class="score-bg" cx="100" cy="100" r="90"/>
+                                <circle class="score-fill" id="compatScoreFill" cx="100" cy="100" r="90"/>
+                            </svg>
+                            <div class="score-value">
+                                <span id="compatScore">0</span>
+                                <span class="percent">%</span>
+                            </div>
+                        </div>
+                        <p class="score-label" id="compatLabel">Compatibility</p>
+                    </div>
+
+                    <!-- Compatibility Details -->
+                    <div class="compatibility-details" id="compatDetails"></div>
+
+                    <!-- Compatibility Areas -->
+                    <div class="compatibility-areas">
+                        <div class="compat-area">
+                            <span class="area-icon">💕</span>
+                            <span class="area-name">Romance</span>
+                            <div class="area-bar">
+                                <div class="area-fill" id="romanceBar"></div>
+                            </div>
+                            <span class="area-score" id="romanceScore">0%</span>
+                        </div>
+                        <div class="compat-area">
+                            <span class="area-icon">🗣️</span>
+                            <span class="area-name">Communication</span>
+                            <div class="area-bar">
+                                <div class="area-fill" id="communicationBar"></div>
+                            </div>
+                            <span class="area-score" id="communicationScore">0%</span>
+                        </div>
+                        <div class="compat-area">
+                            <span class="area-icon">🎯</span>
+                            <span class="area-name">Shared Goals</span>
+                            <div class="area-bar">
+                                <div class="area-fill" id="goalsBar"></div>
+                            </div>
+                            <span class="area-score" id="goalsScore">0%</span>
+                        </div>
+                        <div class="compat-area">
+                            <span class="area-icon">🔥</span>
+                            <span class="area-name">Passion</span>
+                            <div class="area-bar">
+                                <div class="area-fill" id="passionBar"></div>
+                            </div>
+                            <span class="area-score" id="passionScore">0%</span>
+                        </div>
+                        <div class="compat-area">
+                            <span class="area-icon">🤝</span>
+                            <span class="area-name">Trust</span>
+                            <div class="area-bar">
+                                <div class="area-fill" id="trustBar"></div>
+                            </div>
+                            <span class="area-score" id="trustScore">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="section reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Community</span>
+                <h2 class="section-title">Testimonials & Reviews</h2>
+                <p class="section-subtitle">See what others are saying about their mystical journey</p>
+            </div>
+
+            <div class="reviews-container">
+                <!-- Add Review Form -->
+                <div class="add-review glass-card">
+                    <h4>Share Your Experience</h4>
+                    <form id="reviewForm" class="mystical-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="reviewerName">Your Name</label>
+                                <input type="text" id="reviewerName" required placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="reviewRating">Rating</label>
+                                <div class="star-rating" id="starRating">
+                                    <span class="star" data-rating="1">★</span>
+                                    <span class="star" data-rating="2">★</span>
+                                    <span class="star" data-rating="3">★</span>
+                                    <span class="star" data-rating="4">★</span>
+                                    <span class="star" data-rating="5">★</span>
+                                </div>
+                                <input type="hidden" id="reviewRating" value="5">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewService">Service Used</label>
+                            <select id="reviewService" required>
+                                <option value="">Select a service...</option>
+                                <option value="numerology">Numerology Reading</option>
+                                <option value="destiny">Destiny Matrix</option>
+                                <option value="chakra">Chakra Analysis</option>
+                                <option value="astrology">Birth Chart</option>
+                                <option value="compatibility">Compatibility</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewText">Your Review</label>
+                            <textarea id="reviewText" required placeholder="Share your experience..." rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span class="btn-text">Submit Review</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Reviews Display -->
+                <div class="reviews-list" id="reviewsList">
+                    <!-- Reviews will be populated dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-symbol">☽</span>
+                    <span class="logo-text">Mystical Portal</span>
+                    <span class="logo-symbol">☾</span>
+                    <p>Illuminating your path through ancient wisdom</p>
+                </div>
+                <div class="footer-links">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#numerology">Numerology</a></li>
+                        <li><a href="#destiny-matrix">Destiny Matrix</a></li>
+                        <li><a href="#chakras">Chakras</a></li>
+                        <li><a href="#astrology">Astrology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h5>Connect</h5>
+                    <div class="social-links">
+                        <a href="#" class="social-link">✦</a>
+                        <a href="#" class="social-link">✧</a>
+                        <a href="#" class="social-link">★</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Mystical Portal. All readings are for entertainment and spiritual guidance purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+            <p class="loading-text">Consulting the cosmos...</p>
+        </div>
+    </div>
+
+    <!-- Script Files -->
+    <script src="numerology-data.js"></script>
+    <script src="astrology-data.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
